@@ -323,10 +323,10 @@
       "name": "standby",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "3.5"
+      "languageVersion": "3.3"
     }
   ],
-  "generated": "2025-01-21T17:01:58.034315Z",
+  "generated": "2025-01-21T17:58:07.609455Z",
   "generator": "pub",
   "generatorVersion": "3.5.4",
   "flutterRoot": "file:///home/cayub/Documents/flutter_sdk/flutter",
