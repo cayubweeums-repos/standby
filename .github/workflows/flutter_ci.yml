@@ -3,10 +3,8 @@ on:
   push:
     branches:
       - main
-env:
-  FLUTTER_CHANNEL: 'stable'
-jobs:
 
+jobs:
   build_android:
     name: Build Android
     runs-on: ubuntu-latest
@@ -18,7 +16,6 @@ jobs:
         uses: subosito/flutter-action@v2.16.0
         with:
           flutter-version-file: 'pubspec.yaml'
-          channel: ${{ env.FLUTTER_CHANNEL }}
           cache: true
       - name: Build APK
         run: flutter build apk --release
