@@ -16,6 +16,7 @@ jobs:
         uses: subosito/flutter-action@v2.16.0
         with:
           flutter-version-file: 'pubspec.yaml'
+          flutter-version: '3.16.5'
           cache: true
       - name: Build APK
         run: flutter build apk --release
@@ -23,4 +24,3 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: release-apk
-          path: build/app/outputs/flutter-apk/app-release.apk
