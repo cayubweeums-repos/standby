@@ -17,9 +17,13 @@ jobs:
         with:
           flutter-version: '3.16.5'
           cache: true
+      - name: Get dependencies
+        run: flutter pub get
       - name: Build APK
+        working-directory: .
         run: flutter build apk --release
       - name: Upload APK
         uses: actions/upload-artifact@v3
         with:
           name: release-apk
+          path: build/app/outputs/flutter-apk/app-release.apk
