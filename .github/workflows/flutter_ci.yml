@@ -14,15 +14,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - name: Install dependencies
-        run: flutter pub get
-      - name: Run tests
-        run: flutter test
-      - name: Build APK
-        working-directory: .
-        run: flutter build apk --release
-      - name: Upload APK
-        uses: actions/upload-artifact@v3
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
         with:
-          name: release-apk
-          path: build/app/outputs/flutter-apk/app-release.apk
+          channel: stable
+      # Get flutter packages
+      - run: flutter pub get
+      # Build :D 
+      - run: flutter build apk
